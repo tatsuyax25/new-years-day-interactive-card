@@ -28,3 +28,21 @@ body {
   background-size: contain;
   opacity: 0.9;
 }
+
+/* Couple silhouette */
+#couple {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 200px;
+  height: 300px;
+  transform: translateX(-50%);
+  background: url('assets/couple-silhouette.svg') no-repeat bottom;
+  background-size: contain;
+  opacity: 0.95;
+}
+
+/* Hidden canvas for text particle mapping */
+#textCanvas {
+  display: none;
+}
