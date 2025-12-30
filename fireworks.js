@@ -44,3 +44,23 @@ class Particle {
     ctx.globalAlpha = 1;
   }
 }
+
+// Launch a random firework
+function launchFirework() {
+  const x = rand(100, canvas.width - 100);
+  const y = rand(100, canvas.height / 2);
+
+  for (let i = 0; i < 60; i++) {
+    const angle = (Math.PI * 2 * i) / 60;
+    const speed = rand(2, 5);
+    particles.push(
+      new Particle(
+        x,
+        y,
+        `hsl(${rand(0, 360)}, 100%, 60%)`,
+        Math.cos(angle) * speed,
+        Math.sin(angle) * speed
+      )
+    );
+  }
+}
