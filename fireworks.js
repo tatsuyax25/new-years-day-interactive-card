@@ -64,3 +64,37 @@ function launchFirework() {
     );
   }
 }
+
+// Create text particles
+function createTextParticles() {
+  const textCanvas = document.getElementById("textCanvas");
+  const tctx = textCanvas.getContext("2d");
+
+  textCanvas.width = 800;
+  textCanvas.height = 200;
+
+  tctx.fillStyle = "white";
+  tctx.font = "80px sans-serif";
+  tctx.fillText("Happy New Year! 2026!", 20, 120);
+
+  const imgData = tctx.getImageData(0, 0, textCanvas.width, textCanvas.height);
+
+  for (let y = 0; y < imgData.height; y += 4) {
+    for (let x = 0; x < imgData.width; x += 4) {
+      const index = (y * imgData.width + x) * 4;
+      if (imgData.data[index + 3] > 128) {
+        textParticles.push(
+          new Particle(
+            canvas.width / 2,
+            canvas.height / 2,
+            "white",
+            (x - textCanvas.width / 2) * 0.02,
+            (y - textCanvas.height / 2) * 0.02,
+            2,
+            true
+          )
+        );
+      }
+    }
+  }
+}
