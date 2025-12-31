@@ -5,11 +5,11 @@
   viewBox="0 0 300 400"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <!-- Ground -->
-  <rect x="0" y="340" width="300" height="60" fill="black" />
-
+  <!-- Rooftop platform they're standing on -->
+  <rect x="50" y="280" width="200" height="120" fill="#2a2a2a" rx="8" />
+  
   <!-- Couple group -->
-  <g fill="#050505">
+  <g fill="#000000">
     <!-- Person 1 (left, slightly taller) -->
     <!-- Legs -->
     <rect x="110" y="240" width="20" height="100" rx="6" />
