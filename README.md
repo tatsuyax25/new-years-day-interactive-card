@@ -13,7 +13,7 @@ An interactive New Year's Eve celebration card featuring a Times Square-style ba
 
 ## Screenshot
 
-![New Year's Interactive Card](https://i.imgur.com/a1IMT68.png)
+https://imgur.com/a1IMT68
 
 ## Technologies Used
 
