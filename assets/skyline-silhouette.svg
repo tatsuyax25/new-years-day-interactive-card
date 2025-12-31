@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1200"
+  height="300"
+  viewBox="0 0 1200 300"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Background base -->
+  <rect width="1200" height="300" fill="black" />
+
+  <!-- Rounded building shapes -->
+  <g fill="#050505">
+    <!-- Left cluster -->
+    <rect x="0" y="140" width="80" height="160" rx="8" />
+    <rect x="70" y="110" width="100" height="190" rx="10" />
+    <rect x="150" y="160" width="70" height="140" rx="8" />
+    <rect x="210" y="130" width="90" height="170" rx="12" />
+
+    <!-- Mid cluster -->
+    <rect x="280" y="100" width="110" height="200" rx="14" />
+    <rect x="360" y="150" width="80" height="150" rx="10" />
+    <rect x="420" y="120" width="90" height="180" rx="12" />
+    <rect x="490" y="170" width="70" height="130" rx="8" />
+
+    <!-- Center tall "cute skyscraper" -->
+    <rect x="540" y="60" width="110" height="240" rx="16" />
+    <rect x="580" y="30" width="30" height="50" rx="10" />
+
+    <!-- Right mid cluster -->
+    <rect x="640" y="130" width="80" height="170" rx="12" />
+    <rect x="700" y="100" width="100" height="200" rx="14" />
+    <rect x="780" y="150" width="90" height="150" rx="10" />
+
+    <!-- Right cluster -->
+    <rect x="860" y="110" width="110" height="190" rx="14" />
+    <rect x="940" y="160" width="80" height="140" rx="10" />
+    <rect x="1010" y="130" width="90" height="170" rx="12" />
+    <rect x="1090" y="150" width="80" height="150" rx="10" />
+  </g>
+
+  <!-- Soft roof details (simple cute antennas) -->
+  <g stroke="#090909" stroke-width="4" stroke-linecap="round">
+    <line x1="585" y1="30" x2="585" y2="10" />
+    <line x1="595" y1="30" x2="595" y2="5" />
+  </g>
+</svg>
