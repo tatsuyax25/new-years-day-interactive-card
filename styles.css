@@ -1,8 +1,9 @@
+/* === GLOBAL SCENE STYLING === */
 body {
   margin: 0;
   overflow: hidden;
   background: linear-gradient(#020111, #000000);
-  font-family: sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 #scene {
@@ -11,14 +12,88 @@ body {
   height: 100vh;
 }
 
-/* Fireworks canvas */
+/* === FIREWORKS CANVAS === */
 #fireworks {
   position: absolute;
   top: 0;
   left: 0;
+  pointer-events: none;
 }
 
-/* City skyline silhouette */
+/* === COUNTDOWN TOWER === */
+#tower {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  width: 180px;
+  height: 70vh;
+  background: #0a0a0a;
+  border-left: 4px solid #222;
+  border-right: 4px solid #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* === GLOWING BALL === */
+#ball {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #ffe066, #ff9900);
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  /* starting position */
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 20px #ffcc33, 0 0 40px #ff9900;
+  transition: top 3s ease-in;
+  /* ball drop animation */
+}
+
+/* Ball drop final position (added via JS) */
+#ball.drop {
+  top: calc(100% - 120px);
+}
+
+/* === COUNTDOWN NUMBER === */
+#countdown {
+  margin-top: 120px;
+  font-size: 80px;
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffcc33;
+  font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.4s ease-out;
+}
+
+/* Fade-out effect for each number */
+#countdown.fade {
+  opacity: 0;
+}
+
+/* === BILLBOARD === */
+#billboard {
+  position: absolute;
+  bottom: 20px;
+  width: 90%;
+  height: 80px;
+  background: #111;
+  border: 4px solid #333;
+  color: #ffe066;
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  /* hidden until reveal */
+  transition: opacity 1.2s ease-out;
+  text-shadow: 0 0 10px #ffcc33;
+}
+
+/* === SKYLINE SILHOUETTE === */
 #skyline {
   position: absolute;
   bottom: 0;
@@ -29,20 +104,15 @@ body {
   opacity: 0.9;
 }
 
-/* Couple silhouette */
+/* === COUPLE SILHOUETTE === */
 #couple {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 200px;
-  height: 300px;
+  width: 220px;
+  height: 320px;
   transform: translateX(-50%);
   background: url('assets/couple-silhouette.svg') no-repeat bottom;
   background-size: contain;
   opacity: 0.95;
-}
-
-/* Hidden canvas for text particle mapping */
-#textCanvas {
-  display: none;
 }
