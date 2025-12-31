@@ -146,3 +146,20 @@ function startFireworksShow() {
   START EVERYTHING
    ============================================================ */
 startCountdown();
+
+/* ============================================================
+  SNOW ANIMATION
+   ============================================================ */
+function createSnowflake() {
+  const snowflake = document.createElement("div");
+  snowflake.classList.add("snowflake");
+  snowflake.textContent = "❄";
+  snowflake.style.left = Math.random() * 100 + "vw";
+  snowflake.style.animationDuration = Math.random() * 3 + 5 + "s";
+  snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+  document.body.appendChild(snowflake);
+
+  setTimeout(() => snowflake.remove(), 8000);
+}
+
+setInterval(createSnowflake, 200);

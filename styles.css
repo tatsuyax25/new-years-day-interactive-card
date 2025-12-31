@@ -21,6 +21,24 @@ body {
   z-index: 1;
 }
 
+/* === SNOW ANIMATION === */
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: #fff;
+  font-size: 1em;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 4;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
 /* === COUNTDOWN TOWER (positioned over skyline) === */
 #tower {
   position: absolute;
@@ -103,6 +121,12 @@ body {
   background: url('assets/couple-silhouette.svg') no-repeat bottom;
   background-size: contain;
   opacity: 0.95;
+  animation: gentleSway 4s ease-in-out infinite;
+}
+
+@keyframes gentleSway {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-3px); }
 }
 
 #skyline,

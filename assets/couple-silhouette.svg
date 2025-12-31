@@ -8,6 +8,40 @@
   <!-- Rooftop platform they're standing on -->
   <rect x="50" y="280" width="200" height="120" fill="#2a2a2a" rx="8" />
   
+  <!-- Rooftop railing -->
+  <g fill="#1a1a1a" stroke="#333" stroke-width="2">
+    <rect x="55" y="275" width="4" height="25" rx="1" />
+    <rect x="85" y="275" width="4" height="25" rx="1" />
+    <rect x="115" y="275" width="4" height="25" rx="1" />
+    <rect x="145" y="275" width="4" height="25" rx="1" />
+    <rect x="175" y="275" width="4" height="25" rx="1" />
+    <rect x="205" y="275" width="4" height="25" rx="1" />
+    <rect x="235" y="275" width="4" height="25" rx="1" />
+    <rect x="50" y="273" width="200" height="3" rx="1" />
+  </g>
+  
+  <!-- Sparkles/stars around couple -->
+  <g fill="#ffffff">
+    <circle cx="100" cy="160" r="4">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="95" cy="175" r="3">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="210" cy="165" r="4">
+      <animate attributeName="opacity" values="1;0.4;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="215" cy="180" r="3">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="150" cy="150" r="3.5">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2.3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="190" cy="155" r="3">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
   <!-- Couple group -->
   <g fill="#000000">
     <!-- Person 1 (left, slightly taller) -->
