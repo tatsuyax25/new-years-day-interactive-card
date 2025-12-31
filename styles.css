@@ -43,8 +43,9 @@ body {
 #tower {
   position: absolute;
   left: 50%;
-  bottom: 30vh;
+  top: 10vh;
   width: 110px;
+  height: 60vh;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
@@ -59,44 +60,42 @@ body {
   background: radial-gradient(circle, #ffe066, #ff9900);
   border-radius: 50%;
   box-shadow: 0 0 20px #ffcc33, 0 0 40px #ff9900;
-  transition: transform 3s ease-in;
+  position: absolute;
+  top: 0;
+  transition: top 10s ease-in;
+  z-index: 1;
 }
 
 /* Ball drop animation */
 #ball.drop {
-  transform: translateY(200px);
+  top: calc(100% - 140px);
+}
+
+/* === BILLBOARD === */
+#billboard {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  padding: 20px;
+  background: #111;
+  border: 3px solid #333;
+  color: #ffe066;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 10px #ffcc33;
+  z-index: 2;
 }
 
 /* === COUNTDOWN NUMBER === */
 #countdown {
-  margin-top: 20px;
-  font-size: 80px;
-  color: #ffffff;
-  text-shadow: 0 0 10px #ffcc33;
-  font-weight: bold;
-  opacity: 1;
+  display: inline-block;
   transition: opacity 0.4s ease-out;
 }
 
 /* Fade-out effect for each number */
 #countdown.fade {
   opacity: 0;
-}
-
-/* === BILLBOARD === */
-#billboard {
-  margin-top: 20px;
-  width: 200px;
-  padding: 15px;
-  background: #111;
-  border: 3px solid #333;
-  color: #ffe066;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 1.2s ease-out;
-  text-shadow: 0 0 10px #ffcc33;
 }
 
 /* === SKYLINE SILHOUETTE === */

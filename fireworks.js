@@ -91,21 +91,25 @@ let count = 10;
 
 function startCountdown() {
   const countdownEl = document.getElementById("countdown");
+  const ball = document.getElementById("ball");
 
   const interval = setInterval(() => {
-    countdownEl.textContent = count;
-
-    // Fade animation for each number
-    countdownEl.classList.add("fade");
-    setTimeout(() => countdownEl.classList.remove("fade"), 300);
-
-    if (count === 0) {
-      clearInterval(interval);
-      dropBall();
-    }
-
     count--;
+    
+    if (count > 0) {
+      countdownEl.textContent = count;
+      countdownEl.classList.add("fade");
+      setTimeout(() => countdownEl.classList.remove("fade"), 300);
+    } else {
+      countdownEl.textContent = "Happy New Year 2026!";
+      countdownEl.style.fontSize = "24px";
+      clearInterval(interval);
+      startFireworksShow();
+    }
   }, 1000);
+  
+  // Start ball drop immediately
+  ball.classList.add("drop");
 }
 
 /* ============================================================
