@@ -101,8 +101,8 @@ function startCountdown() {
       countdownEl.classList.add("fade");
       setTimeout(() => countdownEl.classList.remove("fade"), 300);
     } else {
-      countdownEl.textContent = "Happy New Year 2026!";
-      countdownEl.style.fontSize = "20px";
+      countdownEl.innerHTML = "Happy New&nbsp;Year<br>2026!";
+      countdownEl.style.fontSize = "22px";
       clearInterval(interval);
       startFireworksShow();
     }
