@@ -146,3 +146,72 @@ body {
   position: absolute;
   z-index: 2;
 }
+
+
+/* === MOBILE OPTIMIZATION === */
+@media (max-width: 768px) {
+  #tower {
+    width: 90px;
+    height: 50vh;
+    top: 15vh;
+  }
+  
+  #ball {
+    width: 45px;
+    height: 45px;
+  }
+  
+  #billboard {
+    width: 160px;
+    height: 80px;
+    padding: 15px;
+    font-size: 45px;
+  }
+  
+  #countdown {
+    font-size: 45px;
+  }
+  
+  #couple {
+    width: 150px;
+    height: 220px;
+  }
+  
+  #skyline {
+    height: 25vh;
+  }
+}
+
+@media (max-width: 480px) {
+  #tower {
+    width: 70px;
+    height: 45vh;
+    top: 20vh;
+  }
+  
+  #ball {
+    width: 35px;
+    height: 35px;
+  }
+  
+  #billboard {
+    width: 130px;
+    height: 70px;
+    padding: 10px;
+    font-size: 32px;
+    border: 3px solid #ffcc33;
+  }
+  
+  #countdown {
+    font-size: 32px;
+  }
+  
+  #couple {
+    width: 120px;
+    height: 180px;
+  }
+  
+  #skyline {
+    height: 22vh;
+  }
+}
